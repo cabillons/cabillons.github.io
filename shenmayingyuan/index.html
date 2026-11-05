@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>神马影院在线观看免费完整版-免费高清电影电视剧在线观看_神马影院手机版片库</title>
+<meta name="description" content="神马影院在线观看免费完整版：整理电影、电视剧、动漫与综艺的在线观看入口，提供片库分类、热播榜单与手机端观看说明，帮助观众快速找到想看的内容。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23101828'/%3E%3Cpath d='M24 18l22 14-22 14z' fill='%23ffb02e'/%3E%3C/svg%3E">
+<style>
+  :root{
+    --bg:#0c1020;
+    --bg-soft:#141a2e;
+    --panel:#1a2138;
+    --line:#28304a;
+    --text:#eef1f8;
+    --muted:#9aa4bd;
+    --gold:#ffb02e;
+    --gold-soft:#ffd479;
+    --teal:#4fd1c5;
+    --radius:16px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--bg);
+    color:var(--text);
+    font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans SC",system-ui,sans-serif;
+    line-height:1.75;
+    font-size:16px;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:inherit;text-decoration:none}
+  img,svg{display:block}
+  .wrap{width:100%;max-width:1140px;margin:0 auto;padding:0 20px}
+
+  /* ---------- header ---------- */
+  header.site{
+    position:sticky;top:0;z-index:50;
+    background:rgba(12,16,32,.88);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav-bar{
+    display:flex;align-items:center;justify-content:space-between;
+    gap:16px;padding:12px 20px;max-width:1140px;margin:0 auto;
+    flex-wrap:wrap;
+  }
+  .brand{display:flex;align-items:center;gap:10px;min-width:0}
+  .brand-mark{
+    width:38px;height:38px;flex:0 0 38px;border-radius:11px;
+    background:linear-gradient(140deg,#1d2742,#101828);
+    display:flex;align-items:center;justify-content:center;
+    border:1px solid #33405f;
+  }
+  .brand-mark svg{width:20px;height:20px}
+  .brand-text{
+    font-size:17px;font-weight:700;letter-spacing:.5px;
+    color:var(--gold-soft);white-space:nowrap;
+    overflow:hidden;text-overflow:ellipsis;
+  }
+  nav.main-nav{display:flex;gap:6px;flex-wrap:wrap}
+  nav.main-nav a{
+    font-size:14px;color:var(--muted);padding:6px 12px;border-radius:20px;
+    transition:.2s;white-space:nowrap;
+  }
+  nav.main-nav a:hover,nav.main-nav a:focus{
+    color:var(--text);background:var(--panel);
+  }
+
+  /* ---------- hero ---------- */
+  .hero{
+    position:relative;overflow:hidden;
+    border-bottom:1px solid var(--line);
+    background:
+      radial-gradient(900px 380px at 82% -10%,rgba(255,176,46,.16),transparent 62%),
+      radial-gradient(700px 340px at 8% 110%,rgba(79,209,197,.12),transparent 60%),
+      var(--bg-soft);
+  }
+  .hero-inner{
+    max-width:1140px;margin:0 auto;padding:56px 20px 52px;
+    display:grid;grid-template-columns:1.15fr .85fr;gap:44px;align-items:center;
+  }
+  .eyebrow{
+    display:inline-flex;align-items:center;gap:8px;
+    font-size:13px;color:var(--gold);letter-spacing:1px;
+    border:1px solid rgba(255,176,46,.35);border-radius:20px;
+    padding:4px 14px;margin-bottom:18px;background:rgba(255,176,46,.07);
+  }
+  .eyebrow .dot{width:6px;height:6px;border-radius:50%;background:var(--gold)}
+  h1{
+    font-size:clamp(25px,3.4vw,40px);
+    line-height:1.35;font-weight:800;letter-spacing:.5px;
+    margin-bottom:18px;
+  }
+  h1 .hl{color:var(--gold)}
+  .hero p.lead{
+    color:#c3cbe0;font-size:15.5px;max-width:40em;margin-bottom:26px;
+  }
+  .hero-actions{display:flex;gap:12px;flex-wrap:wrap}
+  .btn{
+    display:inline-flex;align-items:center;gap:8px;
+    padding:11px 22px;border-radius:12px;font-size:15px;font-weight:600;
+    transition:.2s;border:1px solid transparent;cursor:pointer;
+  }
+  .btn-primary{background:var(--gold);color:#1a1206}
+  .btn-primary:hover{background:#ffc253}
+  .btn-ghost{border-color:#3a4566;color:var(--text);background:rgba(255,255,255,.03)}
+  .btn-ghost:hover{border-color:var(--gold);color:var(--gold-soft)}
+  .hero-stats{
+    display:flex;gap:28px;margin-top:30px;flex-wrap:wrap;
+    border-top:1px dashed #313b58;padding-top:20px;
+  }
+  .hero-stats div b{display:block;font-size:19px;color:var(--gold-soft)}
+  .hero-stats div span{font-size:12.5px;color:var(--muted)}
+
+  /* screen illustration */
+  .screen{
+    position:relative;border-radius:var(--radius);
+    border:1px solid #2c3550;background:#0a0e1a;
+    padding:12px;box-shadow:0 24px 60px rgba(0,0,0,.5);
+  }
+  .screen-bar{display:flex;gap:6px;margin-bottom:10px}
+  .screen-bar i{width:9px;height:9px;border-radius:50%;background:#33405f;display:block}
+  .screen-grid{
+    display:grid;grid-template-columns:repeat(3,1fr);gap:8px;
+  }
+  .poster{
+    aspect-ratio:2/3;border-radius:9px;position:relative;overflow:hidden;
+    background:linear-gradient(160deg,#243052,#131a2c);
+    border:1px solid #2e3a58;
+  }
+  .poster::after{
+    content:"";position:absolute;inset:0;
+    background:linear-gradient(180deg,transparent 40%,rgba(0,0,0,.55));
+  }
+  .poster span{
+    position:absolute;left:7px;bottom:6px;z-index:2;
+    font-size:10.5px;color:#dfe5f3;letter-spacing:.5px;
+  }
+  .poster.p1{background:linear-gradient(160deg,#3a2a4f,#151a2e)}
+  .poster.p2{background:linear-gradient(160deg,#2a3f52,#131a2c)}
+  .poster.p3{background:linear-gradient(160deg,#4a3320,#1a1522)}
+  .poster.p4{background:linear-gradient(160deg,#1f3d3a,#111a26)}
+  .poster.p5{background:linear-gradient(160deg,#3d2a2a,#151a2e)}
+  .poster.p6{background:linear-gradient(160deg,#2b3050,#111827)}
+  .screen-play{
+    position:absolute;inset:0;display:flex;align-items:center;justify-content:center;
+    pointer-events:none;
+  }
+  .screen-play svg{width:46px;height:46px;opacity:.85;filter:drop-shadow(0 4px 12px rgba(0,0,0,.6))}
+
+  /* ---------- sections ---------- */
+  section{padding:56px 0}
+  section + section{border-top:1px solid var(--line)}
+  .sec-head{margin-bottom:28px;max-width:46em}
+  .sec-head h2{
+    font-size:clamp(20px,2.4vw,26px);font-weight:750;letter-spacing:.5px;
+    margin-bottom:8px;
+  }
+  .sec-head h2::before{
+    content:"";display:inline-block;width:6px;height:19px;border-radius:3px;
+    background:var(--gold);margin-right:10px;vertical-align:-2px;
+  }
+  .sec-head p{color:var(--muted);font-size:14.5px}
+
+  .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .card{
+    background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);
+    padding:22px 20px;transition:.22s;
+  }
+  .card:hover{transform:translateY(-3px);border-color:#3c4a6e}
+  .card .ico{
+    width:40px;height:40px;border-radius:11px;margin-bottom:14px;
+    display:flex;align-items:center;justify-content:center;
+    background:rgba(255,176,46,.12);border:1px solid rgba(255,176,46,.25);
+  }
+  .card .ico svg{width:20px;height:20px}
+  .card h3{font-size:16px;margin-bottom:8px;font-weight:700}
+  .card p{font-size:14px;color:#aab3c9;line-height:1.7}
+
+  /* library */
+  .lib-layout{display:grid;grid-template-columns:260px 1fr;gap:24px;align-items:start}
+  .filter-box{
+    background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);
+    padding:18px;position:sticky;top:80px;
+  }
+  .filter-box h3{font-size:14px;color:var(--muted);margin-bottom:12px;letter-spacing:1px}
+  .chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px}
+  .chip{
+    font-size:13px;padding:5px 13px;border-radius:18px;cursor:pointer;
+    border:1px solid #35405e;color:#b7c0d6;background:transparent;transition:.18s;
+    font-family:inherit;
+  }
+  .chip:hover{border-color:var(--gold);color:var(--gold-soft)}
+  .chip.active{background:var(--gold);border-color:var(--gold);color:#1a1206;font-weight:600}
+  .search-line{display:flex;gap:8px;margin-bottom:16px}
+  .search-line input{
+    flex:1;min-width:0;background:#0f1526;border:1px solid #35405e;border-radius:10px;
+    color:var(--text);padding:9px 12px;font-size:14px;font-family:inherit;outline:none;
+  }
+  .search-line input:focus{border-color:var(--gold)}
+  .search-line button{
+    background:var(--gold);border:none;border-radius:10px;color:#1a1206;
+    padding:0 16px;font-size:14px;font-weight:600;cursor:pointer;font-family:inherit;
+  }
+  .tip{font-size:12.5px;color:#7d879f;line-height:1.6}
+
+  .grid-films{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+  .film{
+    background:var(--panel);border:1px solid var(--line);border-radius:13px;
+    overflow:hidden;transition:.2s;
+  }
+  .film:hover{border-color:#3c4a6e;transform:translateY(-3px)}
+  .film .thumb{
+    aspect-ratio:16/10;position:relative;
+    background:linear-gradient(150deg,#26314f,#131a2c);
+    display:flex;align-items:center;justify-content:center;
+  }
+  .film .thumb svg{width:34px;height:34px;opacity:.7}
+  .film .meta{padding:11px 12px 13px}
+  .film .meta b{display:block;font-size:13.5px;font-weight:600;margin-bottom:3px}
+  .film .meta span{font-size:12px;color:var(--muted)}
+  .no-result{
+    grid-column:1/-1;text-align:center;color:var(--muted);font-size:14px;
+    padding:40px 0;display:none;
+  }
+
+  /* steps */
+  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;counter-reset:st}
+  .step{
+    border:1px solid var(--line);border-radius:var(--radius);
+    padding:22px 20px;background:rgba(26,33,56,.6);position:relative;
+  }
+  .step::before{
+    counter-increment:st;content:"0" counter(st);
+    font-size:12px;color:var(--gold);letter-spacing:2px;font-weight:700;
+    display:block;margin-bottom:10px;
+  }
+  .step h3{font-size:15.5px;margin-bottom:8px}
+  .step p{font-size:13.8px;color:#aab3c9}
+
+  /* notice / qa */
+  .split{display:grid;grid-template-columns:1.1fr .9fr;gap:24px;align-items:start}
+  .qa-list{display:flex;flex-direction:column;gap:12px}
+  details{
+    background:var(--panel);border:1px solid var(--line);border-radius:12px;
+    padding:14px 16px;
+  }
+  details[open]{border-color:#3c4a6e}
+  summary{
+    cursor:pointer;font-size:14.5px;font-weight:600;list-style:none;
+    display:flex;justify-content:space-between;gap:12px;align-items:center;
+  }
+  summary::-webkit-details-marker{display:none}
+  summary::after{content:"+";color:var(--gold);font-size:18px;line-height:1}
+  details[open] summary::after{content:"–"}
+  details p{font-size:13.8px;color:#aab3c9;margin-top:10px;line-height:1.75}
+
+  .notice-box{
+    background:linear-gradient(160deg,#1c2440,#141a2e);
+    border:1px solid #2f3a58;border-radius:var(--radius);padding:24px;
+  }
+  .notice-box h3{font-size:17px;margin-bottom:12px}
+  .notice-box p{font-size:14px;color:#b3bcd2;margin-bottom:10px}
+  .notice-box ul{list-style:none;display:flex;flex-direction:column;gap:9px;margin-top:6px}
+  .notice-box li{
+    font-size:13.8px;color:#aab3c9;padding-left:18px;position:relative;
+  }
+  .notice-box li::before{
+    content:"";position:absolute;left:0;top:9px;width:6px;height:6px;
+    border-radius:50%;background:var(--teal);
+  }
+
+  /* download strip */
+  .dl-strip{
+    display:flex;align-items:center;justify-content:space-between;gap:20px;
+    background:linear-gradient(120deg,rgba(255,176,46,.12),rgba(79,209,197,.08));
+    border:1px solid #3a4566;border-radius:var(--radius);padding:26px 28px;flex-wrap:wrap;
+  }
+  .dl-strip .txt h3{font-size:18px;margin-bottom:6px}
+  .dl-strip .txt p{font-size:13.8px;color:var(--muted);max-width:44em}
+  .btn-dl{
+    background:var(--gold);color:#1a1206;border-radius:12px;
+    padding:12px 30px;font-size:15px;font-weight:700;
+    pointer-events:none;opacity:.92;
+  }
+
+  /* footer */
+  footer.site{
+    border-top:1px solid var(--line);background:#090d19;padding:36px 0 28px;
+  }
+  .foot-top{
+    display:flex;justify-content:space-between;gap:28px;flex-wrap:wrap;
+    padding-bottom:24px;border-bottom:1px solid #1d2438;
+  }
+  .foot-brand{max-width:34em}
+  .foot-brand .brand{margin-bottom:10px}
+  .foot-brand p{font-size:13.5px;color:#7d879f;line-height:1.8}
+  .foot-links{display:flex;gap:44px;flex-wrap:wrap}
+  .foot-col h4{font-size:13px;color:#c3cbe0;margin-bottom:10px;letter-spacing:1px}
+  .foot-col a{display:block;font-size:13px;color:#7d879f;margin-bottom:7px}
+  .foot-col a:hover{color:var(--gold-soft)}
+  .foot-bottom{
+    padding-top:18px;font-size:12.5px;color:#5f6981;
+    display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;
+  }
+
+  /* responsive */
+  @media (max-width:980px){
+    .hero-inner{grid-template-columns:1fr;gap:34px;padding:40px 20px}
+    .screen{max-width:440px}
+    .lib-layout{grid-template-columns:1fr}
+    .filter-box{position:static}
+    .grid-films{grid-template-columns:repeat(3,1fr)}
+    .cards,.steps{grid-template-columns:repeat(2,1fr)}
+    .split{grid-template-columns:1fr}
+  }
+  @media (max-width:640px){
+    body{font-size:15px}
+    .nav-bar{padding:10px 16px}
+    .brand-text{font-size:15px}
+    nav.main-nav a{font-size:13px;padding:5px 9px}
+    section{padding:40px 0}
+    .hero-inner{padding:32px 16px 36px}
+    .hero-stats{gap:20px}
+    .grid-films{grid-template-columns:repeat(2,1fr);gap:12px}
+    .cards,.steps{grid-template-columns:1fr}
+    .dl-strip{padding:20px}
+    .btn-dl{width:100%;text-align:center}
+    .foot-links{gap:28px}
+  }
+</style>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<header class="site">
+  <div class="nav-bar">
+    <a class="brand" href="#top" aria-label="神马影院在线观看免费完整版 首页">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none"><path d="M8 5l11 7-11 7V5z" fill="#ffb02e"/></svg>
+      </span>
+      <span class="brand-text">神马影院在线观看免费完整版</span>
+    </a>
+    <nav class="main-nav" aria-label="主导航">
+      <a href="#top">首页</a>
+      <a href="#library">片库筛选</a>
+      <a href="#guide">观看指南</a>
+      <a href="#qa">常见问题</a>
+      <a href="#download">客户端下载</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero" style="border-top:none">
+    <div class="hero-inner">
+      <div>
+        <span class="eyebrow"><span class="dot"></span>在线观影 · 免费片库</span>
+        <h1>神马影院在线观看免费完整版</h1>
+        <p class="lead">
+          一个以片库整理为核心的在线观影入口。这里把电影、电视剧、动漫和综艺按类型与热度归拢，配合搜索与筛选，让观众少走弯路，直接找到想看的作品。神马影院在线观看免费完整版关注的是「找片—看片」这条最短路径。
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#library">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M8 5l11 7-11 7V5z" fill="currentColor"/></svg>
+            进入片库
+          </a>
+          <a class="btn btn-ghost" href="#guide">了解观看流程</a>
+        </div>
+        <div class="hero-stats">
+          <div><b>四大类</b><span>电影 / 剧集 / 动漫 / 综艺</span></div>
+          <div><b>多端</b><span>电脑与手机浏览器</span></div>
+          <div><b>按需筛选</b><span>类型 · 地区 · 年份</span></div>
+        </div>
+      </div>
+      <div class="screen" aria-hidden="true">
+        <div class="screen-bar"><i></i><i></i><i></i></div>
+        <div class="screen-grid">
+          <div class="poster p1"><span>电影</span></div>
+          <div class="poster p2"><span>剧集</span></div>
+          <div class="poster p3"><span>动漫</span></div>
+          <div class="poster p4"><span>综艺</span></div>
+          <div class="poster p5"><span>热播</span></div>
+          <div class="poster p6"><span>榜单</span></div>
+        </div>
+        <div class="screen-play">
+          <svg viewBox="0 0 48 48" fill="none" aria-hidden="true">
+            <circle cx="24" cy="24" r="21" stroke="#ffb02e" stroke-width="2"/>
+            <path d="M20 16l13 8-13 8V16z" fill="#ffb02e"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 内容分区 -->
+  <section id="channels">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>片库按内容类型划分</h2>
+        <p>不同作品适合不同的观看节奏。神马影院在线观看免费完整版把内容拆成四条主线，每条主线都有自己的更新规律与检索方式。</p>
+      </div>
+      <div class="cards">
+        <article class="card">
+          <div class="ico" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="14" rx="2" stroke="#ffb02e" stroke-width="1.6"/><path d="M10 9l5 3-5 3V9z" fill="#ffb02e"/></svg>
+          </div>
+          <h3>电影专区</h3>
+          <p>覆盖院线片与经典老片，按动作、喜剧、科幻、悬疑等类型分区。单片时长完整，适合一次看完，也适合按导演或年份回溯。</p>
+        </article>
+        <article class="card">
+          <div class="ico" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="16" rx="2" stroke="#ffb02e" stroke-width="1.6"/><path d="M3 9h18M8 4v5M16 4v5" stroke="#ffb02e" stroke-width="1.4"/></svg>
+          </div>
+          <h3>电视剧集</h3>
+          <p>连续剧按集数组织，支持按更新进度查看。国产剧、港台剧与海外剧分开归类，追更时能清楚知道当前更新到第几集。</p>
+        </article>
+        <article class="card">
+          <div class="ico" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="8.5" stroke="#ffb02e" stroke-width="1.6"/><path d="M12 7.5v5l3.2 2" stroke="#ffb02e" stroke-width="1.6" stroke-linecap="round"/></svg>
+          </div>
+          <h3>动漫与综艺</h3>
+          <p>动漫包含连载与剧场版，综艺按季归档。两类内容更新频繁，片库会把最新一期放在对应栏目的前列，减少翻找。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 片库筛选 -->
+  <section id="library">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>片库筛选与搜索</h2>
+        <p>输入片名或关键词即可过滤下方条目，也可以点击类型标签快速切换。这里的条目用于展示筛选逻辑，实际片库以站内更新为准。</p>
+      </div>
+      <div class="lib-layout">
+        <aside class="filter-box">
+          <h3>类型筛选</h3>
+          <div class="chips" id="typeChips">
+            <button class="chip active" data-type="全部" type="button">全部</button>
+            <button class="chip" data-type="电影" type="button">电影</button>
+            <button class="chip" data-type="剧集" type="button">剧集</button>
+            <button class="chip" data-type="动漫" type="button">动漫</button>
+            <button class="chip" data-type="综艺" type="button">综艺</button>
+          </div>
+          <h3>片名搜索</h3>
+          <div class="search-line">
+            <input id="keyword" type="search" placeholder="输入片名关键词" aria-label="输入片名关键词">
+            <button type="button" id="searchBtn">搜索</button>
+          </div>
+          <p class="tip">提示：搜索仅匹配下方展示的示例条目，用于说明神马影院在线观看免费完整版的片库检索方式。</p>
+        </aside>
+
+        <div class="grid-films" id="filmGrid">
+          <article class="film" data-type="电影" data-name="城市边缘的夏天">
+            <div class="thumb" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M8 5l11 7-11 7V5z" fill="#ffb02e"/></svg></div>
+            <div class="meta"><b>城市边缘的夏天</b><span>电影 · 剧情</span></div>
+          </article>
+          <article class="film" data-type="电影" data-name="雪线以北">
+            <div class="thumb" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M8 5l11 7-11 7V5z" fill="#ffb02e"/></svg></div>
+            <div class="meta"><b>雪线以北</b><span>电影 · 冒险</span></div>
+          </article>
+          <article class="film" data-type="剧集" data-name="长街灯火">
+            <div class="thumb" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M8 5l11 7-11 7V5z" fill="#ffb02e"/></svg></div>
+            <div class="meta"><b>长街灯火</b><span>剧集 · 都市</span></div>
+          </article>
+          <article class="film" data-type="剧集" data-name="回声档案">
+            <div class="thumb" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M8 5l11 7-11 7V5z" fill="#ffb02e"/></svg></div>
+            <div class="meta"><b>回声档案</b><span>剧集 · 悬疑</span></div>
+          </article>
+          <article class="film" data-type="动漫" data-name="云海邮差">
+            <div class="thumb" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M8 5l11 7-11 7V5z" fill="#ffb02e"/></svg></div>
+            <div class="meta"><b>云海邮差</b><span>动漫 · 治愈</span></div>
+          </article>
+          <article class="film" data-type="动漫" data-name="星轨少年">
+            <div class="thumb" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M8 5l11 7-11 7V5z" fill="#ffb02e"/></svg></div>
+            <div class="meta"><b>星轨少年</b><span>动漫 · 热血</span></div>
+          </article>
+          <article class="film" data-type="综艺" data-name="周末厨房计划">
+            <div class="thumb" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M8 5l11 7-11 7V5z" fill="#ffb02e"/></svg></div>
+            <div class="meta"><b>周末厨房计划</b><span>综艺 · 生活</span></div>
+          </article>
+          <article class="film" data-type="综艺" data-name="城市开麦">
+            <div class="thumb" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M8 5l11 7-11 7V5z" fill="#ffb02e"/></svg></div>
+            <div class="meta"><b>城市开麦</b><span>综艺 · 音乐</span></div>
+          </article>
+          <p class="no-result" id="noResult">没有匹配的条目，换个关键词试试。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 观看指南 -->
+  <section id="guide">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>三步找到想看的片</h2>
+        <p>神马影院在线观看免费完整版的浏览路径尽量短：先定类型，再筛片名，最后进入播放页。桌面端与手机端的操作顺序一致。</p>
+      </div>
+      <div class="steps">
+        <article class="step">
+          <h3>选定内容类型</h3>
+          <p>先判断想看的是电影、剧集、动漫还是综艺。类型确定后，片库会收窄范围，避免在无关条目里反复翻页。</p>
+        </article>
+        <article class="step">
+          <h3>用关键词缩小范围</h3>
+          <p>记得片名片段时，直接输入关键词搜索；只记得题材时，用类型标签配合年份、地区条件逐层过滤。</p>
+        </article>
+        <article class="step">
+          <h3>进入播放页观看</h3>
+          <p>点击条目进入详情页，可以看到简介、集数或片长信息，再选择对应线路开始播放。手机端建议横屏观看。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 常见问题 + 说明 -->
+  <section id="qa">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>常见问题与使用说明</h2>
+        <p>关于观看方式、片库更新与设备适配，下面几条覆盖了大多数观众最先关心的问题。</p>
+      </div>
+      <div class="split">
+        <div class="qa-list">
+          <details open>
+            <summary>神马影院在线观看免费完整版需要注册吗？</summary>
+            <p>浏览片库与查看详情页不需要注册。部分内容可能要求登录后收藏或续看，具体以站内提示为准，页面不会替用户做额外承诺。</p>
+          </details>
+          <details>
+            <summary>片库多久更新一次？</summary>
+            <p>更新节奏取决于内容类型：连载动漫与综艺通常跟着播出进度走，电影与剧集按版权方上线时间整理。片库页会标注条目的最新状态。</p>
+          </details>
+          <details>
+            <summary>手机上能正常观看吗？</summary>
+            <p>页面采用自适应布局，手机浏览器可以直接访问。观看时建议切换横屏并使用稳定的网络，弱网环境下可先降低清晰度。</p>
+          </details>
+          <details>
+            <summary>搜索不到想看的片子怎么办？</summary>
+            <p>先尝试更短的关键词，例如只输入片名中的两三个字；也可以按类型浏览后逐页查找。若片库暂未收录，会在后续更新中补充。</p>
+          </details>
+        </div>
+        <aside class="notice-box">
+          <h3>观影前的几点提醒</h3>
+          <p>神马影院在线观看免费完整版以整理片库信息为主，页面展示的条目、分类与筛选用法都围绕「更快找到内容」这一目标设计。</p>
+          <ul>
+            <li>优先使用片名关键词，比逐页翻找更高效。</li>
+            <li>剧集注意查看集数与更新进度，避免重复打开。</li>
+            <li>手机端横屏观看，画面比例更贴近原始画幅。</li>
+            <li>网络不稳定时，先暂停缓冲再继续播放。</li>
+          </ul>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- 下载 -->
+  <section id="download">
+    <div class="wrap">
+      <div class="dl-strip">
+        <div class="txt">
+          <h3>客户端下载</h3>
+          <p>桌面客户端支持片库浏览与播放记录同步，适合长时间追剧的观众。当前下载地址正在准备中，开放后会在此处更新，浏览器端功能不受影响。</p>
+        </div>
+        <a class="btn-dl" href="#" data-download-placeholder="true" aria-disabled="true" tabindex="-1">下载</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <div class="brand">
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M8 5l11 7-11 7V5z" fill="#ffb02e"/></svg>
+          </span>
+          <span class="brand-text">神马影院在线观看免费完整版</span>
+        </div>
+        <p>神马影院在线观看免费完整版提供电影、剧集、动漫与综艺的片库整理与检索入口，帮助观众按类型与关键词快速定位内容，在电脑和手机浏览器上都能顺畅浏览。</p>
+      </div>
+      <div class="foot-links">
+        <div class="foot-col">
+          <h4>内容导航</h4>
+          <a href="#channels">片库类型</a>
+          <a href="#library">筛选搜索</a>
+          <a href="#guide">观看指南</a>
+        </div>
+        <div class="foot-col">
+          <h4>帮助</h4>
+          <a href="#qa">常见问题</a>
+          <a href="#download">客户端下载</a>
+          <a href="#top">返回首页</a>
+        </div>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>神马影院在线观看免费完整版 · 片库信息整理</span>
+      <span>页面内容以站内实际更新为准</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var chips = document.querySelectorAll('#typeChips .chip');
+  var grid = document.getElementById('filmGrid');
+  var films = grid.querySelectorAll('.film');
+  var noResult = document.getElementById('noResult');
+  var input = document.getElementById('keyword');
+  var searchBtn = document.getElementById('searchBtn');
+  var currentType = '全部';
+
+  function applyFilter(){
+    var kw = input.value.trim().toLowerCase();
+    var shown = 0;
+    films.forEach(function(f){
+      var typeOk = (currentType === '全部') || (f.getAttribute('data-type') === currentType);
+      var nameOk = !kw || f.getAttribute('data-name').toLowerCase().indexOf(kw) !== -1;
+      var ok = typeOk && nameOk;
+      f.style.display = ok ? '' : 'none';
+      if(ok) shown++;
+    });
+    noResult.style.display = shown === 0 ? 'block' : 'none';
+  }
+
+  chips.forEach(function(c){
+    c.addEventListener('click', function(){
+      chips.forEach(function(x){ x.classList.remove('active'); });
+      c.classList.add('active');
+      currentType = c.getAttribute('data-type');
+      applyFilter();
+    });
+  });
+
+  searchBtn.addEventListener('click', applyFilter);
+  input.addEventListener('keydown', function(e){
+    if(e.key === 'Enter'){ e.preventDefault(); applyFilter(); }
+  });
+  input.addEventListener('input', applyFilter);
+})();
+</script>
+
+</body>
+</html>
